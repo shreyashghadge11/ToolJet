@@ -1313,6 +1313,14 @@ export const widgets = [
           defaultValue: false,
         },
       },
+      timeFormat: {
+        type: 'toggle',
+        displayName: 'Enable toggle for 24H format',
+        validation: {
+          schema: { type: 'boolean' },
+          defaultValue: false,
+        },
+      },
       enableDate: {
         type: 'toggle',
         displayName: 'Enable date selection?',
