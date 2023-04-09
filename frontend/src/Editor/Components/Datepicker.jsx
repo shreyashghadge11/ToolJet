@@ -17,7 +17,7 @@ export const Datepicker = function Datepicker({
   fireEvent,
   dataCy,
 }) {
-  const { enableTime, enableDate, defaultValue, disabledDates } = properties;
+  const { enableTime, enableDate, defaultValue, disabledDates, timeFormat } = properties;
   const format = typeof properties.format === 'string' ? properties.format : '';
   const { visibility, disabledState, borderRadius } = styles;
 
@@ -96,6 +96,7 @@ export const Datepicker = function Datepicker({
         onChange={(date) => onDateChange(date)}
         showTimeInput={enableTime ? true : false}
         showTimeSelectOnly={enableDate ? false : true}
+        dateFormat={timeFormat ? `${format} H:mm` : `${format} h:mm a`}
         onFocus={(event) => {
           onComponentClick(id, component, event);
         }}
